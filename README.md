@@ -1,15 +1,18 @@
 static
 
 
-(base) PS C:\Users\Asus\Downloads> ssh -i "web_server_key.pem" ubuntu@ec2-3-26-94-26.ap-southeast-2.compute.amazonaws.com
-
 sudo apt update
 sudo apt install apache2 -y
+sudo systemctl start apache2
 
-sudo systemctl status apache2
+cd /var/www/html
+sudo nano index.html (default)
+sudo rm index.html
 
-sudo rm /var/www/html/index.html
-sudo nano /var/www/html/index.html
+ubuntu@ip-172-31-40-142:/var/www/html$ sudo nano pract.html
+ubuntu@ip-172-31-40-142:/var/www/html$ sudo systemctl restart apache2
+
+http://public-ip
 go on http://public ip
 
 using nginx
